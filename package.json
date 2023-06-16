@@ -1,0 +1,28 @@
+{
+  "name": "company-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello.js",
+  "scripts": {
+    "start": "npx nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shiv-Raj-Singh/Company-Task.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shiv-Raj-Singh/Company-Task/issues"
+  },
+  "homepage": "https://github.com/Shiv-Raj-Singh/Company-Task#readme",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "joi": "^17.9.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.3.0"
+  }
+}
