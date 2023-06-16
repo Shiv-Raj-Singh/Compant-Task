@@ -14,29 +14,29 @@ function catchAsync(con){
 
 //  Create Books 
 
-// import { data , arr } from "../xyz.js";
+import { data , arr } from "../xyz.js";
 
 export const createBooks = catchAsync(async (req,res,next)=>{
-//     const result = []
+    const result = []
     
-//     for (let i of arr){
-//         const data1 = await validBookSchema.validateAsync(i)
-//         const books = data1.books
+    for (let i of arr){
+        const data1 = await validBookSchema.validateAsync(i)
+        const books = data1.books
+        console.log(data1);
+        books.forEach(book =>
+            book.reviews.forEach(review =>{
+                review.postDate = moment().format()    
+            })
+            )
         
-//         books.forEach(book =>
-//             book.reviews.forEach(review =>{
-//                 review.postDate = moment().format()    
-//             })
-//             )
-        
-//         const abc = await bookModel.create(data1)
-//         result.push(abc)
-        
-//     }
+        const abc = await bookModel.create(data1)
+        result.push(abc)
+       
+    }
     
-//     return res.status(201).json({
-//         status : true , message : 'Books Created Successfully !'  , data : result 
-//     })
+    return res.status(201).json({
+        status : true , message : 'Books Created Successfully !'  , data : result 
+    })
 })
 
 

@@ -1,7 +1,7 @@
 import Joi  from"joi"
 
 const bookSchema = Joi.object({
-  publisher: Joi.string().required().trim().regex(/^[a-zA-Z(/0-9)]*$/).message('Publisher Name Should be Valid !').lowercase(),
+  publisher: Joi.string().required().trim().regex(/^[a-zA-Z0-9(/ )]*$/).message('Publisher Name Should be Valid !').lowercase(),
   books: Joi.array().items(
     Joi.object({
       name: Joi.string().required().regex(/^[a-zA-Z0-9(/ )]*$/).message('Book-Name Should be Valid !'),

@@ -1225,10 +1225,13 @@ export const data = [
         }
       ]
     
-// export const arr = []
+export const arr = []
 // let n = data.length - 1
-// for (let i = n ; i > 0 ; i--){
-//     const book = data[i]
+// for (let i = 3*n ; i > 0 ; i--){
+//     const onj = data[0]
+//     const book = structuredClone(onj)
+//     book.publisher+= " " + i
+//     // console.log(book);
 //     const rating1 = parseInt(Math.random()*5 + 1)
 //     const rating2 = parseInt((Math.random()*10 + 2)/2)
 //     console.log(rating1 , rating2);
@@ -1237,15 +1240,16 @@ export const data = [
 //     book.books[1].language = 'English'
 //     book.books[0].reviews[1].message = 'it is an awesome book you have to read this once '
 //     book.books[0].reviews[1].rating = rating2
+//     book.books[0].reviews[1].isContained = true
 //     book.books[0].reviews[0].rating = rating1
 //     arr.push(book)
 // }
 
-export const arr = data.map((a,index)=>{
-    a.publisher = 'publisher'+index
-    a.books[1].language = 'English'
-    return a
-})      
+// export const arr = data.map((a,index)=>{
+//     a.publisher = 'publisher'+index
+//     a.books[1].language = 'English'
+//     return a
+// })      
 
-// console.log(arr.slice(0,5));
+// console.log(arr.slice(0,5).forEach(a=>console.log(a.publisher)));
 
